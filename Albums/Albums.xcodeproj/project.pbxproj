@@ -14,6 +14,7 @@
 		D6EBDE522139EC0600850516 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBDE512139EC0600850516 /* AlbumsTableViewController.swift */; };
 		D6EBDE542139F12100850516 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBDE532139F12100850516 /* AlbumDetailTableViewController.swift */; };
 		D6EBDE562139F13700850516 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBDE552139F13700850516 /* SongTableViewCell.swift */; };
+		D6EBDE582139F56400850516 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBDE572139F56400850516 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D6EBDE512139EC0600850516 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
 		D6EBDE532139F12100850516 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		D6EBDE552139F13700850516 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		D6EBDE572139F56400850516 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D6EBDE3E2139EB3800850516 /* Albums */ = {
 			isa = PBXGroup;
 			children = (
+				D6EBDE572139F56400850516 /* Album.swift */,
 				D6EBDE512139EC0600850516 /* AlbumsTableViewController.swift */,
 				D6EBDE532139F12100850516 /* AlbumDetailTableViewController.swift */,
 				D6EBDE552139F13700850516 /* SongTableViewCell.swift */,
@@ -145,6 +148,7 @@
 				D6EBDE402139EB3800850516 /* AppDelegate.swift in Sources */,
 				D6EBDE542139F12100850516 /* AlbumDetailTableViewController.swift in Sources */,
 				D6EBDE522139EC0600850516 /* AlbumsTableViewController.swift in Sources */,
+				D6EBDE582139F56400850516 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
