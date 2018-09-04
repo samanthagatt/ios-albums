@@ -17,6 +17,7 @@ struct Album: Codable {
         case artist
         case genres
         case urls = "coverArt"
+        case songs
         
         enum URLsCodingKeys: String, CodingKey {
             case url
@@ -30,6 +31,7 @@ struct Album: Codable {
     var artist: String
     var genres: [String]
     var urls: [URL]
+    var songs: [Song]
     
     
     // MARK: - Decodable
@@ -57,10 +59,18 @@ struct Album: Codable {
         }
         let urls = urlStrings.compactMap { URL(string: $0) }
         
+        var songs: [Song] = []
+        var songsContainer = try container.nestedUnkeyedContainer(forKey: .songs)
+        while !songsContainer.isAtEnd {
+            let song = try songsContainer.decode(Song.self)
+            songs.append(song)
+        }
+        
         self.title = title
         self.artist = artist
         self.genres = genres
         self.urls = urls
+        self.songs = songs
     }
     
     
@@ -81,6 +91,11 @@ struct Album: Codable {
         for url in urls {
             var urlContainer = urlsContainer.nestedContainer(keyedBy: CodingKeys.URLsCodingKeys.self)
             try urlContainer.encode(url, forKey: .url)
+        }
+        
+        var songsContainer = container.nestedUnkeyedContainer(forKey: .songs)
+        for song in songs {
+            try songsContainer.encode(song)
         }
     }
 }
